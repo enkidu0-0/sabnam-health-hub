@@ -1,3 +1,4 @@
+
 import React from "react";
 import { 
   Clipboard, Calendar, Pill, Stethoscope, 
@@ -121,7 +122,11 @@ const Services = () => {
                         Call Emergency Line
                       </a>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="text-white border-white/40 hover:bg-white/10">
+                    <Button 
+                      asChild 
+                      size="lg" 
+                      className="bg-white/10 text-white hover:bg-white/20 border-0 backdrop-blur-sm"
+                    >
                       <Link to="/services#emergency">
                         Learn More
                       </Link>
