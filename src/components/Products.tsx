@@ -1,7 +1,6 @@
-
 import React from "react";
 import { 
-  ChevronRight, Pills, Thermometer, Bandage, 
+  ChevronRight, Pill, Thermometer, Bandage, 
   Stethoscope, Baby, BrainCircuit, Smile
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,7 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const categories = [
     {
-      icon: <Pills className="h-6 w-6" />,
+      icon: <Pill className="h-6 w-6" />,
       title: "Prescription Medications",
       description: "High-quality prescription drugs with expert guidance",
       link: "/products/prescription-medications"

@@ -1,7 +1,6 @@
-
 import React from "react";
 import { 
-  Clipboard, Calendar, Pills, Stethoscope, 
+  Clipboard, Calendar, Pill, Stethoscope, 
   Heart, ShieldCheck, Clock, ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,7 +21,7 @@ const Services = () => {
       link: "/services#consultations"
     },
     {
-      icon: <Pills className="h-6 w-6" />,
+      icon: <Pill className="h-6 w-6" />,
       title: "Medication Management",
       description: "Personalized medication reviews and management plans.",
       link: "/services#medication"
