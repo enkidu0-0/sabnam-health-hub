@@ -58,15 +58,21 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Enhanced Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 text-primary transition-opacity duration-200 hover:opacity-90"
+            className="flex items-center space-x-2 transition-opacity duration-200 hover:opacity-90 group"
           >
-            <Heart className="h-8 w-8 sm:h-10 sm:w-10" strokeWidth={1.5} />
-            <span className="text-xl sm:text-2xl font-semibold tracking-tight">
-              Sabnam Medical
-            </span>
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <Heart className="relative h-8 w-8 sm:h-10 sm:w-10 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+            </div>
+            <div className="flex flex-col items-start">
+              <span className="text-xl sm:text-2xl font-semibold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Sabnam Medical
+              </span>
+              <span className="text-xs text-foreground/60 hidden sm:inline-block">Your Health Partner</span>
+            </div>
           </Link>
           
           {/* Desktop Navigation */}
@@ -149,11 +155,14 @@ const Navbar = () => {
           <div className="flex items-center justify-between p-4 border-b">
             <Link 
               to="/"
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-2 group"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Heart className="h-7 w-7" />
-              <span className="text-xl font-semibold">Sabnam Medical</span>
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <Heart className="relative h-7 w-7 text-primary" />
+              </div>
+              <span className="text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Sabnam Medical</span>
             </Link>
             <Button
               variant="ghost"
